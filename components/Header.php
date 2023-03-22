@@ -17,7 +17,7 @@
                         <path d="M21 21l-5.2-5.2" />
                     </svg>
                 </a>
-                <?php if ($_COOKIE) : ?>
+                <?php if ($_COOKIE['currentUser']) : ?>
                     <a class="nav-link" href="../user.php">
                         <?php echo $_COOKIE['currentUser'] ?>
                     </a>

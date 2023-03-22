@@ -8,4 +8,4 @@ $domain = 'exemple.com';
 
 setcookie($fieldName, $userName, $expiresOn, $path);
 
-header('Location: /index.php');
+header('Location: /');

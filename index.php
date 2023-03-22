@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <?php 
+    <?php
     $link = 'subscribe.php';
     $linkName = 'Subscribe';
-    require './components/Header.php'; 
+    require './components/Header.php';
     ?>
     <div class="container">
         <div class="nav-scroller py-1 mb-2">

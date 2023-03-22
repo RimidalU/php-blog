@@ -61,7 +61,7 @@
                         </div>
                         <div class="container text-end">
                             <button type="reset" class="btn btn-secondary mr-2">Reset</button>
-                            <button type="submit" form="subscribe" class="btn btn-primary">Submit</button>
+                            <button type="submit" form="userSettings" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
                 </div>
