@@ -20,24 +20,24 @@
                     <h3 class="pb-4 mb-1 font-italic">
                         Subscribe
                     </h3>
-                    <form action="check.php" method="post" class="border p-2">
+                    <form action="./utils/postman.php" method="post" id="subscribe" class="border p-2">
                         <div class="form-group mb-2">
                             <label for="inputName">Name:</label>
-                            <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="John Doe" required>
+                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" placeholder="John Doe" required autofocus>
                             <small id="namelHelp" class="form-text text-muted">*Enter You name</small>
                         </div>
                         <div class="form-group mb-2">
                             <label for="inputEmail">Email:</label>
-                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="example@email.com" required autofocus>
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="example@email.com" required>
                             <small id="emailHelp" class="form-text text-muted">*Enter your email</small>
                         </div>
                         <div class="form-group form-switch mb-4">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <input class="form-check-input" type="checkbox" name="isAdditional" role="switch" id="flexSwitchCheckDefault">
                             <label class="form-check-label" for="flexSwitchCheckDefault">Send me additional content</label>
                         </div>
                         <div class="container text-end">
                             <button type="reset" class="btn btn-secondary mr-2">Reset</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" form="subscribe" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
                 </div>
