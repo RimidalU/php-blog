@@ -17,7 +17,15 @@
                         <path d="M21 21l-5.2-5.2" />
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                <?php if ($_COOKIE) : ?>
+                    <a class="nav-link" href="../user.php">
+                        <?php echo $_COOKIE['currentUser'] ?>
+                    </a>
+                    <a class="btn btn-sm btn-outline-danger" href="../utils/logout.php">LogOut</a>
+                <?php else : ?>
+                    <a class="btn btn-sx btn-outline-secondary" href="../auth.php">Sign up</a>
+                <?php endif;  ?>
+
             </div>
         </div>
     </header>
