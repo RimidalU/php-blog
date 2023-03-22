@@ -12,8 +12,11 @@
 </head>
 
 <body class="h-100">
-    <?php require './components/Header.php'; ?>
-    <div class="container-fluid d-flex flex-column h-100">
+<?php 
+    $link = '/';
+    $linkName = 'Home';
+    require './components/Header.php'; 
+    ?>    <div class="container-fluid d-flex flex-column h-100">
         <main role="main" class="">
             <div class="row justify-content-center">
                 <div class="col-md-4 bg-light p-4 my-5">

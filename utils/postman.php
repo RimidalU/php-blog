@@ -66,4 +66,4 @@
     // echo json_encode(["result" => $result, "status" => $status]);
     // echo '</pre>';
 
-    header('Location: /subscribe.php');
+    header('Location: /index.php');

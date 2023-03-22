@@ -12,7 +12,11 @@
 </head>
 
 <body>
-    <?php require './components/Header.php'; ?>
+    <?php 
+    $link = 'subscribe.php';
+    $linkName = 'Subscribe';
+    require './components/Header.php'; 
+    ?>
     <div class="container">
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
