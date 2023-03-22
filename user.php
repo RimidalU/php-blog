@@ -23,7 +23,7 @@
                     <h3 class="pb-4 mb-1 font-italic">
                         User settings
                     </h3>
-                    <form action="./utils/cookieSetter.php" method="post" id="subscribe" class="border p-2">
+                    <form action="./utils/cookieSetter.php" method="post" id="userSettings" class="border p-2">
                         <div class="form-group mb-2">
                             <label for="inputName"> Name:</label>
                             <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" placeholder="
