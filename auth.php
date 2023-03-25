@@ -23,7 +23,7 @@
                     <h3 class="pb-4 mb-1 font-italic">
                         Authorization
                     </h3>
-                    <form action="./utils/cookieSetter.php" method="post" id="subscribe" class="border p-2">
+                    <form action="./utils/userAddToDB.php" method="post" id="subscribe" class="border p-2">
                         <div class="form-group mb-2">
                             <label for="inputName">Name:</label>
                             <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" minlength="3" maxlength="50" placeholder="John Doe" required autofocus>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group mb-2">
                             <label for="inputEmail">Email:</label>
-                            <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="example@email.com" required disabled>
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="example@email.com" required>
                             <small id="emailHelp" class="form-text text-muted">*Enter your email</small>
                         </div>
                         <div class="container text-end">
