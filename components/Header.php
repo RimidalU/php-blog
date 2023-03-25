@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <div class="container-fluid bg-light">
     <header class="blog-header container py-3 ">
         <div class="row flex-nowrap justify-content-between align-items-center">
@@ -17,9 +21,9 @@
                         <path d="M21 21l-5.2-5.2" />
                     </svg>
                 </a>
-                <?php if ($_COOKIE['currentUser']) : ?>
+                <?php if ($_SESSION['currentUser']) : ?>
                     <a class="nav-link" href="../user.php">
-                        <?php echo $_COOKIE['currentUser'] ?>
+                        <?php echo $_SESSION['currentUser']['name'] ?>
                     </a>
                     <a class="btn btn-sm btn-outline-danger" href="../utils/logout.php">LogOut</a>
                 <?php else : ?>

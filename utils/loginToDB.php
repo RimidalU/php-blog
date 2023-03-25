@@ -20,9 +20,13 @@ if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
 
         if (password_verify($pass, $row['pass'])) {
-            $userName = $row['name'];
 
-            require './cookieSetter.php';
+            $_SESSION['currentUser'] = [
+                'name' =>  $row['name'],
+                'id' =>  $row['id'],
+            ];
+
+            header('Location: /');
             exit();
         }
     };

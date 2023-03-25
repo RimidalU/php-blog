@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,12 +27,12 @@
                     <h3 class="pb-4 mb-1 font-italic">
                         User settings
                     </h3>
-                    <form action="./utils/cookieSetter.php" method="post" id="userSettings" class="border p-2">
+                    <form action="#" method="post" id="userSettings" class="border p-2"> // to updateUser
                         <div class="form-group mb-2">
                             <label for="inputName"> Name:</label>
-                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" minlength="3" maxlength="50"  placeholder="
+                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" minlength="3" maxlength="50" placeholder="
                             <?php
-                            $currentUser = $_COOKIE['currentUser'];
+                            $currentUser = $_SESSION['currentUser']['name'];
 
                             if ($currentUser) {
                                 echo $currentUser;
@@ -66,7 +70,7 @@
                         </div>
                         <div class="container text-end">
                             <button type="reset" class="btn btn-secondary mr-2">Reset</button>
-                            <button type="submit" form="userSettings" class="btn btn-primary">Submit</button>
+                            <button type="submit" disabled form="userSettings" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
                 </div>

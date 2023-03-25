@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +16,11 @@
 </head>
 
 <body class="h-100">
-<?php 
+    <?php
     $link = '/';
     $linkName = 'Home';
-    require './components/Header.php'; 
-    ?>    <div class="container-fluid d-flex flex-column h-100">
+    require './components/Header.php';
+    ?> <div class="container-fluid d-flex flex-column h-100">
         <main role="main" class="">
             <div class="row justify-content-center">
                 <div class="col-md-4 bg-light p-4 my-5">
@@ -26,7 +30,16 @@
                     <form action="./utils/postman.php" method="post" id="subscribe" class="border p-2">
                         <div class="form-group mb-2">
                             <label for="inputName">Name:</label>
-                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" placeholder="John Doe" required autofocus>
+                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" placeholder="
+                            <?php
+                            $currentUser = $_SESSION['currentUser']['name'];
+
+                            if ($currentUser) {
+                                echo $currentUser;
+                            } else {
+                                echo 'John Doe';
+                            };
+                            ?>" required autofocus>
                             <small id="namelHelp" class="form-text text-muted">*Enter You name</small>
                         </div>
                         <div class="form-group mb-2">

@@ -1,5 +1,6 @@
 <?php
+session_start();
 
-setcookie('currentUser', null, -1, '/'); 
+unset($_SESSION['currentUser']);
 
 header('Location: /');
