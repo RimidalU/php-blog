@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if ($_SESSION['currentUser']) {
+    header('Location: ./user.php');
+};
 ?>
 <!DOCTYPE html>
 <html lang="en">

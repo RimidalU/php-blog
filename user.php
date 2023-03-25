@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+session_start();
+if (!$_SESSION['currentUser']) {
+    header('Location: ./auth.php');
+};
 ?>
 
 <!DOCTYPE html>
