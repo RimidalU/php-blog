@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,16 +38,31 @@
                             <small id="passHelp" class="form-text text-muted">*Enter Password</small>
                         </div>
                         <div class="form-group mb-2">
+                            <label for="inputConfirmPass">Confirm password:</label>
+                            <input type="password" class="form-control" id="inputConfirmPass" name="inputConfirmPass" aria-describedby="confirmPassHelp" minlength="6" maxlength="32" placeholder="12345" required>
+                            <small id="confirmPassHelp" class="form-text text-muted">*Confirm the password</small>
+                        </div>
+                        <div class="form-group mb-2">
                             <label for="inputEmail">Email:</label>
                             <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="example@email.com" required>
                             <small id="emailHelp" class="form-text text-muted">*Enter your email</small>
                         </div>
+                        <p>Do you already have an account? <a href="../login.php">LogIn</a></p>
                         <div class="container text-end">
                             <button type="reset" class="btn btn-secondary mr-2">Reset</button>
                             <button type="submit" form="subscribe" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
                 </div>
+                <?php
+                if ($_SESSION['checkPassMessage']) {
+                    $toastMessage = $_SESSION['checkPassMessage'];
+                    $alertClass  = $_SESSION['alertClass'];
+
+                    require './components/Alert.php';
+                }
+                unset($_SESSION['checkPassMessage'])
+                ?>
             </div>
         </main>
 

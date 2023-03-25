@@ -23,6 +23,7 @@
                     </a>
                     <a class="btn btn-sm btn-outline-danger" href="../utils/logout.php">LogOut</a>
                 <?php else : ?>
+                    <a class="nav-link" href="../login.php">LogIn</a>
                     <a class="btn btn-sx btn-outline-secondary" href="../auth.php">Sign up</a>
                 <?php endif;  ?>
 
