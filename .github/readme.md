@@ -53,8 +53,8 @@ Project is: *in progress*
 ## Room for Improvement
 
 To do:
-- [ ] add MySQL DB,
-- [ ] implement registration using db,
+- [X] add MySQL DB,
+- [X] implement registration using db,
 - [ ] implement photo upload for posts,
 - [ ] add date and type of post,
 - [ ] filter by tags,
