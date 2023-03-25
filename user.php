@@ -26,7 +26,7 @@
                     <form action="./utils/cookieSetter.php" method="post" id="userSettings" class="border p-2">
                         <div class="form-group mb-2">
                             <label for="inputName"> Name:</label>
-                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" placeholder="
+                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" minlength="3" maxlength="50"  placeholder="
                             <?php
                             $currentUser = $_COOKIE['currentUser'];
 
@@ -53,6 +53,11 @@
                             <label for="inputAvatar" class="form-label">Change your avatar:</label>
                             <input class="form-control" type="file" id="inputAvatar" disabled>
                             <small id="inputAvatar" class="form-text text-muted">*Upload a picture or photo</small>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="inputPas">Password:</label>
+                            <input type="password" class="form-control" id="inputPass" name="inputPass" aria-describedby="passHelp" minlength="6" maxlength="32" placeholder="12345" required>
+                            <small id="passHelp" class="form-text text-muted">*Enter Password</small>
                         </div>
                         <div class="form-group mb-4">
                             <label for="themeInput" class="form-label">Color theme</label>

@@ -26,8 +26,13 @@
                     <form action="./utils/cookieSetter.php" method="post" id="subscribe" class="border p-2">
                         <div class="form-group mb-2">
                             <label for="inputName">Name:</label>
-                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" placeholder="John Doe" required autofocus>
+                            <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="nameHelp" minlength="3" maxlength="50" placeholder="John Doe" required autofocus>
                             <small id="namelHelp" class="form-text text-muted">*Enter You name</small>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="inputPass">Password:</label>
+                            <input type="password" class="form-control" id="inputPass" name="inputPass" aria-describedby="passHelp" minlength="6" maxlength="32" placeholder="12345" required>
+                            <small id="passHelp" class="form-text text-muted">*Enter Password</small>
                         </div>
                         <div class="form-group mb-2">
                             <label for="inputEmail">Email:</label>
